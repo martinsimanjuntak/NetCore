@@ -19,6 +19,7 @@ namespace NETCore1.Models
         public string Lastname { get; set; }
         
         public string Phone { get; set; }
+        public string Email { get; set; }
         public DateTime BirthDate { get; set; }
         public virtual Account Account { get; set; }
 

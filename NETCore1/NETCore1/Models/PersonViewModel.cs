@@ -15,6 +15,7 @@ namespace NETCore1.Models
         public string Telp{ get; set; }
         public int Education_id { get; set; }
         public string Unversity_Id { get; set; }
+        public string Email { get; set; }
         public DateTime TglLahir { get; set; }
         public string Password { get; set; }
         public string Degree{ get; set; }

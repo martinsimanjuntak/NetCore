@@ -127,3 +127,4 @@ D:\Kampus Merdeka\week 2\25-8-2021\NETCore1\NETCore1\obj\Debug\netcoreapp3.1\NET
 D:\Kampus Merdeka\week 2\25-8-2021\NETCore1\NETCore1\obj\Debug\netcoreapp3.1\NETCore1.genruntimeconfig.cache
 D:\Kampus Merdeka\week 2\25-8-2021\NETCore1\NETCore1\bin\Debug\netcoreapp3.1\Castle.Core.dll
 D:\Kampus Merdeka\week 2\25-8-2021\NETCore1\NETCore1\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
+D:\Kampus Merdeka\week 2\25-8-2021\NETCore1\NETCore1\obj\Debug\netcoreapp3.1\NETCore1.csproj.AssemblyReference.cache

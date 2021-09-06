@@ -67,18 +67,32 @@ namespace NETCore1.Controllers
         }
 
         [HttpPost("register")]
-        public ActionResult Insert(PersonViewModel personViewModel)
+        public ActionResult Register(PersonViewModel personViewModel)
         {
 
             try
             {
-
-                return Ok(new
+                if (personRepository.Register(personViewModel) == false)
                 {
-                    data = personRepository.Register(personViewModel),
-                    statusCode = HttpStatusCode.OK,
-                    message = "Success"
-                });
+                    return BadRequest(new
+                    {
+                       
+                        statusCode = HttpStatusCode.BadRequest,
+                        message = "Data Sudah Digunakan"
+                    });
+                    
+                   
+                }
+                else
+                {
+                    return Ok(new
+                    {
+                        statusCode = HttpStatusCode.OK,
+                        message = "Success"
+                    });
+
+                }
+                
             }
             catch
             {

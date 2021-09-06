@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NETCore1.Context;
 
 namespace NETCore1.Migrations
 {
     [DbContext(typeof(MyContext))]
-    partial class MyContextModelSnapshot : ModelSnapshot
+    [Migration("20210906051351_Add-tableRole")]
+    partial class AddtableRole
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -84,7 +86,12 @@ namespace NETCore1.Migrations
                     b.Property<string>("Phone")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("RoleId")
+                        .HasColumnType("int");
+
                     b.HasKey("NIK");
+
+                    b.HasIndex("RoleId");
 
                     b.ToTable("tb_m_persons");
                 });
@@ -154,11 +161,16 @@ namespace NETCore1.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("AccountNIK")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("RoleName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AccountNIK");
 
                     b.ToTable("tb_m_roles");
                 });
@@ -188,7 +200,7 @@ namespace NETCore1.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("tb_tr_role_accounts");
+                    b.ToTable("tb_m_roleaccounts");
                 });
 
             modelBuilder.Entity("NETCore1.Models.University", b =>
@@ -226,6 +238,15 @@ namespace NETCore1.Migrations
                     b.Navigation("University");
                 });
 
+            modelBuilder.Entity("NETCore1.Models.Person", b =>
+                {
+                    b.HasOne("NETCore1.Models.Role", "Role")
+                        .WithMany()
+                        .HasForeignKey("RoleId");
+
+                    b.Navigation("Role");
+                });
+
             modelBuilder.Entity("NETCore1.Models.Profiling", b =>
                 {
                     b.HasOne("NETCore1.Models.Education", "Education")
@@ -242,6 +263,15 @@ namespace NETCore1.Migrations
                     b.Navigation("Account");
 
                     b.Navigation("Education");
+                });
+
+            modelBuilder.Entity("NETCore1.Models.Role", b =>
+                {
+                    b.HasOne("NETCore1.Models.Account", "Account")
+                        .WithMany()
+                        .HasForeignKey("AccountNIK");
+
+                    b.Navigation("Account");
                 });
 
             modelBuilder.Entity("NETCore1.Models.RoleAccount", b =>

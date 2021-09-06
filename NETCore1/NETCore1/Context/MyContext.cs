@@ -18,6 +18,8 @@ namespace NETCore1.Context
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Profiling> Profilings{ get; set; }
         public DbSet<University> Universities{ get; set; }
+        public DbSet<Role> Roles{ get; set; }
+        public DbSet<RoleAccount> RoleAccounts { get; set; }
 
         public DbSet<PersonViewModel> PersonViewModels { get; set; }
 
@@ -46,7 +48,14 @@ namespace NETCore1.Context
                .WithMany(e => e.Educations)
                .OnDelete(DeleteBehavior.SetNull);
 
-
+          
+            modelBuilder.Entity<Role>()
+                 .HasMany(ra => ra.RoleAccounts)
+               .WithOne(b => b.Role);
+            // 
+            modelBuilder.Entity<RoleAccount>()
+                 .HasOne(ra => ra.Account)
+               .WithMany(b => b.RoleAccounts);
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

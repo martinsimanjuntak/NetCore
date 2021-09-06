@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using NETCore1.Base;
 using NETCore1.Models;
 using NETCore1.Repository.Data;
@@ -6,6 +8,7 @@ using System.Net;
     
 namespace NETCore1.Controllers
 {
+
     [Route("api/[controller]")]
     [ApiController]
     public class PersonController : BaseController<Person, PersonRepository, string>
@@ -13,15 +16,18 @@ namespace NETCore1.Controllers
     {
 
         private readonly PersonRepository personRepository;
+      
+
         public PersonController(PersonRepository repository) : base(repository)
         {
             this.personRepository= repository;
+          
         }
-
+        [Authorize]
         [HttpGet("getperson")]
         public ActionResult GetPerson()
         {
-
+            
             try
             {
                 return Ok(new
@@ -65,41 +71,58 @@ namespace NETCore1.Controllers
             }
 
         }
-
+        [Authorize]
         [HttpPost("register")]
         public ActionResult Register(PersonViewModel personViewModel)
         {
 
             try
             {
-                if (personRepository.Register(personViewModel) == false)
-                {
-                    return BadRequest(new
-                    {
-                       
-                        statusCode = HttpStatusCode.BadRequest,
-                        message = "Data Sudah Digunakan"
-                    });
-                    
-                   
-                }
-                else
+                var status = personRepository.Register(personViewModel);
+                if (status == 200)
                 {
                     return Ok(new
                     {
-                        statusCode = HttpStatusCode.OK,
-                        message = "Success"
+                     
+                        status = HttpStatusCode.BadRequest,
+                        message = "Pendaftaran Berhasil"
                     });
 
+
+                }else if(status == 201)
+                {
+                    return BadRequest(new
+                    {
+                        
+                        status = HttpStatusCode.BadRequest,
+                        message = "NIK Sudah Digunakan"
+                    });
                 }
-                
+                else if (status == 202)
+                {
+                    return BadRequest(new
+                    {
+                        
+                        status = HttpStatusCode.BadRequest,
+                        message = "Email Sudah Digunakan"
+                    });
+                }
+                else
+                {
+                    return BadRequest(new
+                    {
+                        
+                        status = HttpStatusCode.BadRequest,
+                        message = "Phone Sudah Digunakan"
+                    });
+                }
             }
             catch
             {
                 return BadRequest(new
                 {
                     status = HttpStatusCode.BadRequest,
-                    message = "Data Tidak Bisa dupllikat"
+                    message = "NIK Sudah Digunakan"
                 });
 
             }

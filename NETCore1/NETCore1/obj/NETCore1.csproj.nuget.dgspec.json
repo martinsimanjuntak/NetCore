@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Kampus Merdeka\\week 2\\25-8-2021\\NETCore1\\NETCore1\\NETCore1.csproj": {}
+    "D:\\Kampus Merdeka\\week 2\\25-8-2021\\Netcoree\\NetCore\\NETCore1\\NETCore1\\NETCore1.csproj": {}
   },
   "projects": {
-    "D:\\Kampus Merdeka\\week 2\\25-8-2021\\NETCore1\\NETCore1\\NETCore1.csproj": {
+    "D:\\Kampus Merdeka\\week 2\\25-8-2021\\Netcoree\\NetCore\\NETCore1\\NETCore1\\NETCore1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Kampus Merdeka\\week 2\\25-8-2021\\NETCore1\\NETCore1\\NETCore1.csproj",
+        "projectUniqueName": "D:\\Kampus Merdeka\\week 2\\25-8-2021\\Netcoree\\NetCore\\NETCore1\\NETCore1\\NETCore1.csproj",
         "projectName": "NETCore1",
-        "projectPath": "D:\\Kampus Merdeka\\week 2\\25-8-2021\\NETCore1\\NETCore1\\NETCore1.csproj",
+        "projectPath": "D:\\Kampus Merdeka\\week 2\\25-8-2021\\Netcoree\\NetCore\\NETCore1\\NETCore1\\NETCore1.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\Kampus Merdeka\\week 2\\25-8-2021\\NETCore1\\NETCore1\\obj\\",
+        "outputPath": "D:\\Kampus Merdeka\\week 2\\25-8-2021\\Netcoree\\NetCore\\NETCore1\\NETCore1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "BCrypt.Net-Core": {
+              "target": "Package",
+              "version": "[1.6.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.9, )"
@@ -61,6 +69,14 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[5.6.0, )"
             }
           },
           "imports": [

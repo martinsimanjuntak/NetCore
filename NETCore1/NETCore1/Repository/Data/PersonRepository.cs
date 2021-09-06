@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NETCore1.Context;
+using NETCore1.Hash;
 using NETCore1.Models;
 using NETCore1.Repository.Interface;
 using System;
@@ -73,80 +74,74 @@ namespace NETCore1.Repository.Data
                                  GPA = e.GPA,
                                  Unversity_Id = u.Id,
                                  Education_id = e.Id
-                                 
-                                 
                              }).ToList();
 
             return GetPerson;
 
         }
-        public bool Register(PersonViewModel personViewModel)
+        public int Register(PersonViewModel personViewModel)
         {
+            var checkEmail = myContext.Persons.Where(x => x.Email.Equals(personViewModel.Email)).FirstOrDefault();
+            var checkNIK = myContext.Persons.Where(x => x.NIK.Equals(personViewModel.NIK)).FirstOrDefault();
+            var checkPhone = myContext.Persons.Where(x => x.Phone.Equals(personViewModel.Telp)).FirstOrDefault();
+
+            if (checkEmail is null && checkNIK is null && checkPhone is null)
+            {
+                var person = new Person()
+                {
+                    NIK = personViewModel.NIK,
+                    Firstname = personViewModel.NamaDepan,
+                    Lastname = personViewModel.NamaBelakang,
+                    Phone = personViewModel.Telp,
+                    BirthDate = personViewModel.TglLahir,
+                    Email = personViewModel.Email,
+                };
+                myContext.Persons.Add(person);
+                var insert = myContext.SaveChanges();
+                var account = new Account()
+                {
+                    NIK = personViewModel.NIK,
+                    Password = Hashing.HashPassword(personViewModel.Password)
+                };
+                myContext.Accounts.Add(account);
+                insert = myContext.SaveChanges();
+                var education = new Education()
+                {
+                    Degree = personViewModel.Degree,
+                    GPA = personViewModel.GPA,
+                    Univesity_id = personViewModel.Unversity_Id
+                };
+                var role_account = new RoleAccount()
+                {
+                    Nik = personViewModel.NIK,
+                    Role_id = 1
+                };
+                myContext.RoleAccounts.Add(role_account);
+
+                myContext.Educations.Add(education);
+                insert = myContext.SaveChanges();
+                var profiling = new Profiling
+                {
+                    NIK = personViewModel.NIK,
+                    Education_id = education.Id
+                };
+                myContext.Profilings.Add(profiling);
+                insert = myContext.SaveChanges();
+                return 200;
+            }
+            else if(checkNIK != null)
+            {
+                return 201;
+            }else if(checkEmail != null)
+            {
+                return 202;
+            }
+            else
+            {
+                return 203;
+            }
            
-            
-            try
-            {
-                var phonecheck = myContext.Persons.Where(x => x.Phone.Equals(personViewModel.Telp)).Count();
-                var emailcheck = myContext.Persons.Where(x => x.Email.Equals(personViewModel.Email)).Count();
-                if (phonecheck == 0 && emailcheck == 0)
-                {
-                    var person = new Person()
-                    {
-                        NIK = personViewModel.NIK,
-                        Firstname = personViewModel.NamaDepan,
-                        Lastname = personViewModel.NamaBelakang,
-                        Phone = personViewModel.Telp,
-                        BirthDate = personViewModel.TglLahir,
-                        Email = personViewModel.Email,
-
-                    };
-                    myContext.Persons.Add(person);
-                    var insert = myContext.SaveChanges();
-                    var account = new Account()
-                    {
-                        NIK = personViewModel.NIK,
-                        Password = personViewModel.Password
-                    };
-
-                    myContext.Accounts.Add(account);
-                    insert = myContext.SaveChanges();
-                    var education = new Education()
-                    {
-                        Degree = personViewModel.Degree,
-                        GPA = personViewModel.GPA,
-                        Univesity_id = personViewModel.Unversity_Id
-                    };
-
-                    myContext.Educations.Add(education);
-                    insert = myContext.SaveChanges();
-                    var profiling = new Profiling
-                    {
-                        NIK = personViewModel.NIK,
-                        Education_id = education.Id
-                    };
-
-                    myContext.Profilings.Add(profiling);
-                    insert = myContext.SaveChanges();
-
-
-                    return true;
-
-                }
-                else
-                {
-                    return false;
-                    
-                }
-               
-                   
-
-            }
-            catch
-            {
-                throw new DbUpdateException();
-            }
         }
-
-
+      
     }
 }

@@ -152,9 +152,9 @@ namespace NETCore1.Repository.Data
             }
            
         }
-        public string GetRole(string nnik)
+        public string[] GetRole(string nnik)
         {
-            string roles = "";
+           
             var getRole = (from p in myContext.Accounts
                            where p.NIK == nnik
                            join a in myContext.RoleAccounts
@@ -165,14 +165,12 @@ namespace NETCore1.Repository.Data
                            {
                                RoleName = r.RoleName
                            }).ToList();
+            string[] roles = new string[getRole.Count];
 
             for (int i = 0; i < getRole.Count; i++)
             {
-                roles += getRole[i].RoleName;
-                if (i<getRole.Count -1)
-                {
-                    roles += ", ";
-                }
+                    roles[i] = getRole[i].RoleName;    
+                
             }
 
             return roles;

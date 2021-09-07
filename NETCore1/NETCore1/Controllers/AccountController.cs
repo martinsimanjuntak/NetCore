@@ -39,11 +39,16 @@ namespace NETCore1.Controllers
             var action = accountRepository.Login(loginModel);
             if (action == 1)
             {
-                var claims = new[]
+                string[] roles = accountRepository.GetRole(accountRepository.GetEmail(loginModel.Email));
+                var claims = new List<Claim>();
+
+                claims.Add(new Claim("Email", loginModel.Email));
+                foreach (string role in roles)
                 {
-                    new Claim("Email", loginModel.Email),
-                    new Claim("Roles", accountRepository.GetRole(accountRepository.GetEmail(loginModel.Email)))
-                };
+                    claims.Add(new Claim("roles", role));
+                }
+
+                
                 var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"]));
 
                 var signIn = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);

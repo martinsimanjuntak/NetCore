@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NETCore1.Base;
 using NETCore1.Models;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace NETCore1.Controllers
 {
+    [Authorize(Roles = "Manager")]
     [Route("api/[controller]")]
     [ApiController]
     public class RoleController :BaseController<Role, RoleRepository, int>

@@ -71,11 +71,10 @@ namespace NETCore1.Controllers
             }
 
         }
-        [Authorize]
+       
         [HttpPost("register")]
         public ActionResult Register(PersonViewModel personViewModel)
         {
-
             try
             {
                 var status = personRepository.Register(personViewModel);

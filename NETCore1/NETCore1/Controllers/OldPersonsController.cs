@@ -20,6 +20,7 @@ namespace NETCore1.Controllers
         {
             this.personRepository = personRepository;
         }
+
         [HttpPost]
         public ActionResult Insert(Person person)
         {

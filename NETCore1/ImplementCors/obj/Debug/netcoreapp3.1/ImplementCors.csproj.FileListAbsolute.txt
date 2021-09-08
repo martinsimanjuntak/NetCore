@@ -109,3 +109,4 @@ D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\ImplementCors\obj\D
 D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\ImplementCors\obj\Debug\netcoreapp3.1\ImplementCors.dll
 D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\ImplementCors\obj\Debug\netcoreapp3.1\ImplementCors.pdb
 D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\ImplementCors\obj\Debug\netcoreapp3.1\ImplementCors.genruntimeconfig.cache
+D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\ImplementCors\obj\Debug\netcoreapp3.1\Razor\Views\TestCors\Index.cshtml.g.cs

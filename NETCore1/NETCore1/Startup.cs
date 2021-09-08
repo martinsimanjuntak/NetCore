@@ -29,16 +29,23 @@ namespace NETCore1
         {
             services.AddControllers();
             services.AddScoped<OldPersonRepository>();
+
             services.AddScoped<PersonRepository>();
             services.AddScoped<ProfilingRepository>();
             services.AddScoped<EducationRepository>();
             services.AddScoped<UniversityRepository>();
             services.AddScoped<AccountRepository>();
             services.AddScoped<RoleRepository>();
+            services.AddScoped<RoleAccountRepository>();
+
 
 
             services.AddDbContext<MyContext>(options => options.UseLazyLoadingProxies()
             .UseSqlServer(Configuration.GetConnectionString("NETCoreContext")));
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+            });
 
             services.AddSwaggerGen();
 
@@ -65,17 +72,19 @@ namespace NETCore1
                 app.UseDeveloperExceptionPage();
             }
             app.UseSwagger();
-
+         
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
             });
 
             app.UseHttpsRedirection();
+           
 
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
+            app.UseCors(options => options.AllowAnyOrigin());
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

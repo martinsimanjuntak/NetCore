@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "AdDgy0pOPZhKrTEFO61SXHBxXQw3Im2XrEdePJH7nDKxngCtAR/hHPuolzlGhp6r4DrIuvFzJFPZ3/aq3jqoQQ==",
+  "dgSpecHash": "7Pr6g4GwUR2r2xt6THFfXedjr4dG7RCXfA/bjbct3Wi9bRxp6fgCDFd24dc9Cjaakm1aBo4ZUJPCaTgNw3xUPw==",
   "success": true,
   "projectFilePath": "D:\\Kampus Merdeka\\week 2\\25-8-2021\\Netcoree\\NetCore\\NETCore1\\ImplementCors\\ImplementCors.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ASUS\\.nuget\\packages\\jquery\\3.6.0\\jquery.3.6.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",

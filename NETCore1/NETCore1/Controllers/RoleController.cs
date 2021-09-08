@@ -25,7 +25,7 @@ namespace NETCore1.Controllers
         }
 
         [HttpPost("insert")]
-        public ActionResult Insert(Role role)
+        public ActionResult InsertRole(Role role)
         {
             try
             {

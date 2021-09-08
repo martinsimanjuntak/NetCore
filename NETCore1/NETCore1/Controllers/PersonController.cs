@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using NETCore1.Base;
@@ -8,7 +9,7 @@ using System.Net;
     
 namespace NETCore1.Controllers
 {
-
+    [EnableCors("AllowOrigin")]
     [Route("api/[controller]")]
     [ApiController]
     public class PersonController : BaseController<Person, PersonRepository, string>
@@ -23,7 +24,7 @@ namespace NETCore1.Controllers
             this.personRepository= repository;
           
         }
-        [Authorize]
+        //[Authorize]
         [HttpGet("getperson")]
         public ActionResult GetPerson()
         {

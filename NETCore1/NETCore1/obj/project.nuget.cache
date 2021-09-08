@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "750KEzGFcLLmhs55NEFJDALDCWbzAyQP0xh/SxEuYdq37d42HNGf8k7R0CbYF++faXvXgjo5D01h/gb17RoC5Q==",
+  "dgSpecHash": "yQaPi4N+3u2QdWYR/1XLYbT7kN0uctITixhQ8DyI6g7G6cK35isxIWOhcSiYu5eU7jr0bqmdhNVeoP76H8WI5A==",
   "success": true,
   "projectFilePath": "D:\\Kampus Merdeka\\week 2\\25-8-2021\\Netcoree\\NetCore\\NETCore1\\NETCore1\\NETCore1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\jquery\\3.6.0\\jquery.3.6.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.8\\microsoft.aspnetcore.authentication.jwtbearer.3.1.8.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

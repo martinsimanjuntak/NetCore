@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace NETCore1.Repository
 {
-    public class OldPersonRepository 
+    public class OldPersonRepository : IPersonRepository
     {
         private readonly MyContext myContext;
         public OldPersonRepository(MyContext myContext)

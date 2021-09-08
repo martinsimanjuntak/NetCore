@@ -101,7 +101,13 @@ namespace NETCore1.Base
 
             try
             {
-                return Ok(repository.Update(entity));
+                
+                return Ok(new
+                {
+                    data = repository.Update(entity),
+                    statusCode = HttpStatusCode.OK,
+                    message = "Success Mengedit"
+                });
             }
             catch
             {

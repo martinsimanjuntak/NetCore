@@ -17,6 +17,7 @@ namespace NETCore1.Controllers
     {
         public ProfilingController(ProfilingRepository repository) : base(repository)
         {
+
         }
     }
 }

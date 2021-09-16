@@ -49,6 +49,7 @@ namespace NETCore1.Controllers
             }
 
         }
+        [EnableCors("AllowOrigin")]
         [HttpGet("getperson/{nik}")]
         public ActionResult GetPerson(string nik)
         {
@@ -72,6 +73,7 @@ namespace NETCore1.Controllers
             }
 
         }
+        [EnableCors("AllowOrigin")]
        
         [HttpPost("register")]
         public ActionResult Register(PersonViewModel personViewModel)
@@ -122,7 +124,7 @@ namespace NETCore1.Controllers
                 return BadRequest(new
                 {
                     status = HttpStatusCode.BadRequest,
-                    message = "NIK Sudah Digunakan"
+                    message = "Data Gagal"
                 });
 
             }

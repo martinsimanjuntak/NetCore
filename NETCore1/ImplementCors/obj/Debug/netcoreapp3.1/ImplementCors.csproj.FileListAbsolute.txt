@@ -81,7 +81,6 @@ D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\ImplementCors\bin\D
 D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\ImplementCors\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\ImplementCors\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\ImplementCors\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\ImplementCors\obj\Debug\netcoreapp3.1\ImplementCors.csproj.AssemblyReference.cache
 D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\ImplementCors\obj\Debug\netcoreapp3.1\ImplementCors.GeneratedMSBuildEditorConfig.editorconfig
 D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\ImplementCors\obj\Debug\netcoreapp3.1\ImplementCors.AssemblyInfoInputs.cache
 D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\ImplementCors\obj\Debug\netcoreapp3.1\ImplementCors.AssemblyInfo.cs
@@ -110,3 +109,11 @@ D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\ImplementCors\obj\D
 D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\ImplementCors\obj\Debug\netcoreapp3.1\ImplementCors.pdb
 D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\ImplementCors\obj\Debug\netcoreapp3.1\ImplementCors.genruntimeconfig.cache
 D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\ImplementCors\obj\Debug\netcoreapp3.1\Razor\Views\TestCors\Index.cshtml.g.cs
+D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\ImplementCors\obj\Debug\netcoreapp3.1\Razor\Views\LatihanCss\Index.cshtml.g.cs
+D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\ImplementCors\obj\Debug\netcoreapp3.1\Razor\Views\Coba\Index.cshtml.g.cs
+D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\ImplementCors\obj\Debug\netcoreapp3.1\Razor\Views\Coba\Index1.cshtml.g.cs
+D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\ImplementCors\obj\Debug\netcoreapp3.1\Razor\Views\LatihanCss\Index1.cshtml.g.cs
+D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\ImplementCors\obj\Debug\netcoreapp3.1\Razor\Views\Person\Index.cshtml.g.cs
+D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\ImplementCors\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutAdmin.cshtml.g.cs
+D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\ImplementCors\obj\Debug\netcoreapp3.1\ImplementCors.csproj.AssemblyReference.cache
+D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\ImplementCors\obj\Debug\netcoreapp3.1\Razor\Views\Admin\admin.cshtml.g.cs

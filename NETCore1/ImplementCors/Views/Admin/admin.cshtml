@@ -1,0 +1,161 @@
+﻿
+@{
+    Layout = "_LayoutAdmin";
+}
+
+<div class="container mt-5 p-2 border">
+    <button type="button" class="btn btn-primary mt-2 mb-2 pl-5 pr-5" data-toggle="modal" data-target="#register">Register</button>
+    <table class="table table-striped table-hover" id="dataTable">
+        <thead>
+            <tr>
+                <td></td>
+                <td>NIK</td>
+                <td>Nama</td>
+                <td>Nomor Telepon</td>
+                <td>Email</td>
+                <td>Tanggal Lahir</td>
+                <td>Action</td>
+            </tr>
+        </thead>
+
+    </table>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="pokemonDetailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="register">
+    <div class="modal-dialog modal-lg" role="document">
+        <form class="needs-validation" novalidate>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-row">
+                        <div class="col-md-12 mb-3">
+                            <label for="validationCustom01">NIK</label>
+                            <input type="text" class="form-control" id="nik" placeholder="nik" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom02">Fisrt Name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="First name" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom02">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Last name" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-12 mb-3">
+                            <label for="validationCustom03">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid city.
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="validationCustom03">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="password" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid city.
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="validationCustom04">Phone</label>
+                            <input type="text" class="form-control" id="phone" placeholder="Phone Number" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid state.
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="validationCustom05">Birthday</label>
+                            <input type="text" class="form-control" id="birthday" placeholder="Birthday" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid zip.
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom02">Degree</label>
+                            <input type="text" class="form-control" id="degree" placeholder="Degree" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom02">GPA</label>
+                            <input type="text" class="form-control" id="gpa" placeholder="GPA" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="validationCustom05">University</label>
+                            <select class="custom-select" id="university">
+                                <option selected disabled>Choose...</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please provide a valid zip.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                                Agree to terms and conditions
+                            </label>
+                            <div class="invalid-feedback">
+                                You must agree before submitting.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit" id="submit">Submit form</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script></script>
+@section Scripts{
+    <script src="~/js/person.js" asp-append-version="true"></script>
+}
+@section CSS{
+    <link rel="stylesheet" href="~/css/coba.css" />
+}

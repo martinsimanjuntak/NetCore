@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ImplementCors",
+    "\\ImplementCors\\Views",
+    "\\ImplementCors\\Views\\LatihanCss"
   ],
   "SelectedNode": "\\NETCore1.sln",
   "PreviewInSolutionExplorer": false

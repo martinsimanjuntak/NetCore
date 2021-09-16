@@ -193,7 +193,6 @@ D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\NETCore1\bin\Debug\
 D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\NETCore1\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\NETCore1\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\NETCore1\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\NETCore1\obj\Debug\netcoreapp3.1\NETCore1.csproj.AssemblyReference.cache
 D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\NETCore1\obj\Debug\netcoreapp3.1\NETCore1.GeneratedMSBuildEditorConfig.editorconfig
 D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\NETCore1\obj\Debug\netcoreapp3.1\NETCore1.AssemblyInfoInputs.cache
 D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\NETCore1\obj\Debug\netcoreapp3.1\NETCore1.AssemblyInfo.cs
@@ -208,3 +207,4 @@ D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\NETCore1\obj\Debug\
 D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\NETCore1\obj\Debug\netcoreapp3.1\NETCore1.dll
 D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\NETCore1\obj\Debug\netcoreapp3.1\NETCore1.pdb
 D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\NETCore1\obj\Debug\netcoreapp3.1\NETCore1.genruntimeconfig.cache
+D:\Kampus Merdeka\week 2\25-8-2021\Netcoree\NetCore\NETCore1\NETCore1\obj\Debug\netcoreapp3.1\NETCore1.csproj.AssemblyReference.cache

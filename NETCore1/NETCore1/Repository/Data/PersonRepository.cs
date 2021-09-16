@@ -40,10 +40,9 @@ namespace NETCore1.Repository.Data
                                  Email = p.Email,
                                  Telp = p.Phone,
                                  TglLahir = p.BirthDate,
-                                 Password = a.Password,
                                  Degree = e.Degree,
                                  GPA = e.GPA,
-                                 Unversity_Id = u.Id,
+                                 Unversity_Id = u.Name,
                                  Education_id = e.Id
                              }).ToList();
 
@@ -69,10 +68,9 @@ namespace NETCore1.Repository.Data
                                  Email = p.Email,
                                  Telp = p.Phone,
                                  TglLahir = p.BirthDate,
-                                 Password = a.Password,
                                  Degree = e.Degree,
                                  GPA = e.GPA,
-                                 Unversity_Id = u.Id,
+                                 Unversity_Id = u.Name,
                                  Education_id = e.Id
                              }).ToList();
 

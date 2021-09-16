@@ -37,14 +37,14 @@ namespace NETCore1
             services.AddScoped<AccountRepository>();
             services.AddScoped<RoleRepository>();
             services.AddScoped<RoleAccountRepository>();
-
+          
 
 
             services.AddDbContext<MyContext>(options => options.UseLazyLoadingProxies()
             .UseSqlServer(Configuration.GetConnectionString("NETCoreContext")));
             services.AddCors(c =>
             {
-                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             });
 
             services.AddSwaggerGen();
@@ -79,12 +79,13 @@ namespace NETCore1
             });
 
             app.UseHttpsRedirection();
-           
 
+            
             app.UseRouting();
+            app.UseCors(options => options.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             app.UseAuthentication();
             app.UseAuthorization();
-            app.UseCors(options => options.AllowAnyOrigin());
+          
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
